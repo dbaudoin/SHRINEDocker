@@ -149,7 +149,7 @@ RUN chmod +x /opt/shrine/restore-cert.sh
 # ADD ./ressources/restore-cert.sh /opt/shrine/logKeystore.sh
 # RUN chmod +x /opt/shrine/logKeystore.sh
 
-ENV HUB=true
+ENV HUB="true"
 
 RUN touch deployed
 RUN echo 'false'>deployed

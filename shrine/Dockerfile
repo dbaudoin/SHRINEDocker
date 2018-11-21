@@ -152,6 +152,6 @@ RUN chmod +x /opt/shrine/restore-cert.sh
 RUN touch deployed
 RUN echo 'false'>deployed
 
-ENV HUB=false
+ENV HUB="false"
 
 ENTRYPOINT ["/opt/shrine/start.sh"]

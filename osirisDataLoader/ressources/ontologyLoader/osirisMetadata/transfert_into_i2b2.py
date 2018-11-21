@@ -90,8 +90,10 @@ def transfert (path_metafile, path_conceptfile, path_modiffile, path_shrine):
 	BD_user = os.environ['i2b2_db_user_CRC']
 	DB_password = os.environ['i2b2_db_pass_CRC']
 	execution = i2b2_interaction(DB_type, DB_host, DB_name, DB_port, BD_user, DB_password)
+	execution.truncate_data('i2b2demodata','concept_dimension')
 	execution.send_data(path_conceptfile, 'i2b2demodata.concept_dimension')
 	execution.dbcon.commit()
+	execution.truncate_data('i2b2demodata','modifier_dimension')
 	execution.send_data(path_modiffile, 'i2b2demodata.modifier_dimension')
 	execution.dbcon.commit()
 

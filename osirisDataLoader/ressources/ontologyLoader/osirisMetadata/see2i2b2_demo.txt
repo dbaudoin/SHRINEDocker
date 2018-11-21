@@ -1,41 +1,100 @@
-\\i2b2\\OSIRIS\\;ID_0;OSIRIS;;2018-11-21 14:02:01.200496;2018-11-21 14:02:01.200513;2018-11-21 14:02:01.200517;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\;ID_2;patient;;2018-11-21 14:02:01.201138;2018-11-21 14:02:01.201143;2018-11-21 14:02:01.201145;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Gender\\;ID_4;Gender;;2018-11-21 14:02:01.201190;2018-11-21 14:02:01.201193;2018-11-21 14:02:01.201196;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Gender\\Male;ID_4Gender|Male;Gender;;2018-11-21 14:02:02.018720;2018-11-21 14:02:02.018732;2018-11-21 14:02:02.018735;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Gender\\Female;ID_4Gender|Female;Gender;;2018-11-21 14:02:02.019013;2018-11-21 14:02:02.019018;2018-11-21 14:02:02.019020;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Gender\\Undifferentiated;ID_4Gender|Undifferentiated;Gender;;2018-11-21 14:02:02.019039;2018-11-21 14:02:02.019042;2018-11-21 14:02:02.019045;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Gender\\Unknown;ID_4Gender|Unknown;Gender;;2018-11-21 14:02:02.019062;2018-11-21 14:02:02.019065;2018-11-21 14:02:02.019067;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\Ethnicity\\;ID_5;Ethnicity;;2018-11-21 14:02:02.019139;2018-11-21 14:02:02.019143;2018-11-21 14:02:02.019145;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\BirthDate\\;ID_6;BirthDate;;2018-11-21 14:02:02.019182;2018-11-21 14:02:02.019185;2018-11-21 14:02:02.019187;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\DeathDate\\;ID_7;DeathDate;;2018-11-21 14:02:02.019218;2018-11-21 14:02:02.019221;2018-11-21 14:02:02.019223;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\ProviderCenterId\\;ID_8;ProviderCenterId;;2018-11-21 14:02:02.019253;2018-11-21 14:02:02.019256;2018-11-21 14:02:02.019259;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\OriginCenterId\\;ID_9;OriginCenterId;;2018-11-21 14:02:02.019290;2018-11-21 14:02:02.019293;2018-11-21 14:02:02.019296;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\;ID_10;CauseOfDeath;;2018-11-21 14:02:02.019325;2018-11-21 14:02:02.019328;2018-11-21 14:02:02.019331;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\LastNewsDate\\;ID_11;LastNewsDate;;2018-11-21 14:02:02.019360;2018-11-21 14:02:02.019362;2018-11-21 14:02:02.019365;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\patient\\LastNewsStatus\\;ID_12;LastNewsStatus;;2018-11-21 14:02:02.019394;2018-11-21 14:02:02.019397;2018-11-21 14:02:02.019399;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\;ID_14;tumorPathologyEvent;;2018-11-21 14:02:02.019441;2018-11-21 14:02:02.019444;2018-11-21 14:02:02.019447;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\Type\\;ID_15;Type;;2018-11-21 14:02:02.019486;2018-11-21 14:02:02.019489;2018-11-21 14:02:02.019492;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\StartDate\\;ID_16;StartDate;;2018-11-21 14:02:02.019522;2018-11-21 14:02:02.019525;2018-11-21 14:02:02.019532;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\EndDate\\;ID_17;EndDate;;2018-11-21 14:02:02.019562;2018-11-21 14:02:02.019565;2018-11-21 14:02:02.019568;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\PerformanceStatus\\;ID_18;PerformanceStatus;;2018-11-21 14:02:02.019597;2018-11-21 14:02:02.019600;2018-11-21 14:02:02.019602;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\G8\\;ID_19;G8;;2018-11-21 14:02:02.019631;2018-11-21 14:02:02.019634;2018-11-21 14:02:02.019636;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\HistologicalGradeType\\;ID_20;HistologicalGradeType;;2018-11-21 14:02:02.019665;2018-11-21 14:02:02.019668;2018-11-21 14:02:02.019670;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\HistologicalGradeValue\\;ID_21;HistologicalGradeValue;;2018-11-21 14:02:02.019700;2018-11-21 14:02:02.019703;2018-11-21 14:02:02.019705;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\StadeType\\;ID_22;StadeType;;2018-11-21 14:02:02.019733;2018-11-21 14:02:02.019736;2018-11-21 14:02:02.019739;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\StadeValue\\;ID_23;StadeValue;;2018-11-21 14:02:02.019771;2018-11-21 14:02:02.019774;2018-11-21 14:02:02.019777;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\DiagnosisDate\\;ID_24;DiagnosisDate;;2018-11-21 14:02:02.019807;2018-11-21 14:02:02.019810;2018-11-21 14:02:02.019812;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\TopographyCode\\;ID_25;TopographyCode;;2018-11-21 14:02:02.019842;2018-11-21 14:02:02.019845;2018-11-21 14:02:02.019847;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\MorphologyCode\\;ID_26;MorphologyCode;;2018-11-21 14:02:02.019875;2018-11-21 14:02:02.019878;2018-11-21 14:02:02.019881;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\tumorPathologyEvent\\Laterality\\;ID_27;Laterality;;2018-11-21 14:02:02.019909;2018-11-21 14:02:02.019912;2018-11-21 14:02:02.019914;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\TNM\\;ID_28;TNM;;2018-11-21 14:02:02.019958;2018-11-21 14:02:02.019962;2018-11-21 14:02:02.019964;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\Treatment\\;ID_34;Treatment;;2018-11-21 14:02:02.020392;2018-11-21 14:02:02.020398;2018-11-21 14:02:02.020402;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\ResponseEvaluation\\;ID_48;ResponseEvaluation;;2018-11-21 14:02:02.021476;2018-11-21 14:02:02.021479;2018-11-21 14:02:02.021482;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\AdverseEvent\\;ID_51;AdverseEvent;;2018-11-21 14:02:02.021664;2018-11-21 14:02:02.021667;2018-11-21 14:02:02.021670;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\BiologicalSample\\;ID_199;BiologicalSample;;2018-11-21 14:02:02.021994;2018-11-21 14:02:02.021997;2018-11-21 14:02:02.022000;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\Biomarker\\;ID_208;Biomarker;;2018-11-21 14:02:02.022616;2018-11-21 14:02:02.022619;2018-11-21 14:02:02.022621;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\Drug\\;ID_56;Drug;;2018-11-21 14:02:02.022883;2018-11-21 14:02:02.022886;2018-11-21 14:02:02.022889;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\Consent\\;ID_70;Consent;;2018-11-21 14:02:02.023719;2018-11-21 14:02:02.023723;2018-11-21 14:02:02.023725;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\RelatedPathology\\;ID_73;RelatedPathology;;2018-11-21 14:02:02.023916;2018-11-21 14:02:02.023919;2018-11-21 14:02:02.023921;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\FamilyCancerHistory\\;ID_77;FamilyCancerHistory;;2018-11-21 14:02:02.024175;2018-11-21 14:02:02.024178;2018-11-21 14:02:02.024181;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\Annotation\\;ID_80;Annotation;;2018-11-21 14:02:02.024363;2018-11-21 14:02:02.024366;2018-11-21 14:02:02.024368;TEST_OSIRIS;None
-\\i2b2\\OSIRIS\\AlterationOnSample\\;ID_149;AlterationOnSample;;2018-11-21 14:02:02.028634;2018-11-21 14:02:02.028637;2018-11-21 14:02:02.028639;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\;ID_0;OSIRIS;;2018-11-21 16:44:48.308110;2018-11-21 16:44:48.308119;2018-11-21 16:44:48.308121;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\;ID_2;patient;;2018-11-21 16:44:48.308480;2018-11-21 16:44:48.308482;2018-11-21 16:44:48.308484;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Gender\\;ID_4;Gender;;2018-11-21 16:44:48.308509;2018-11-21 16:44:48.308510;2018-11-21 16:44:48.308512;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Gender\\Male\\;patient|Gender:Male;Gender;;2018-11-21 16:44:49.042073;2018-11-21 16:44:49.042081;2018-11-21 16:44:49.042083;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Gender\\Female\\;patient|Gender:Female;Gender;;2018-11-21 16:44:49.042247;2018-11-21 16:44:49.042250;2018-11-21 16:44:49.042251;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Gender\\Undifferentiated\\;patient|Gender:Undifferentiated;Gender;;2018-11-21 16:44:49.042258;2018-11-21 16:44:49.042260;2018-11-21 16:44:49.042261;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Gender\\Unknown\\;patient|Gender:Unknown;Gender;;2018-11-21 16:44:49.042267;2018-11-21 16:44:49.042269;2018-11-21 16:44:49.042271;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\;ID_5;Ethnicity;;2018-11-21 16:44:49.042333;2018-11-21 16:44:49.042335;2018-11-21 16:44:49.042337;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\American Indian or Alaska Native\\;patient|Ethnicity:American Indian or Alaska Native;Ethnicity;;2018-11-21 16:44:49.785489;2018-11-21 16:44:49.785500;2018-11-21 16:44:49.785502;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\American Indian\\;patient|Ethnicity:American Indian;Ethnicity;;2018-11-21 16:44:49.785514;2018-11-21 16:44:49.785516;2018-11-21 16:44:49.785518;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Asian\\;patient|Ethnicity:Asian;Ethnicity;;2018-11-21 16:44:49.785525;2018-11-21 16:44:49.785527;2018-11-21 16:44:49.785529;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Asian Indian\\;patient|Ethnicity:Asian Indian;Ethnicity;;2018-11-21 16:44:49.785537;2018-11-21 16:44:49.785539;2018-11-21 16:44:49.785541;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Bangladeshi\\;patient|Ethnicity:Bangladeshi;Ethnicity;;2018-11-21 16:44:49.785548;2018-11-21 16:44:49.785550;2018-11-21 16:44:49.785551;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Bhutanese\\;patient|Ethnicity:Bhutanese;Ethnicity;;2018-11-21 16:44:49.785558;2018-11-21 16:44:49.785560;2018-11-21 16:44:49.785562;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Burmese\\;patient|Ethnicity:Burmese;Ethnicity;;2018-11-21 16:44:49.785568;2018-11-21 16:44:49.785570;2018-11-21 16:44:49.785572;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Cambodian\\;patient|Ethnicity:Cambodian;Ethnicity;;2018-11-21 16:44:49.785579;2018-11-21 16:44:49.785581;2018-11-21 16:44:49.785582;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Chinese\\;patient|Ethnicity:Chinese;Ethnicity;;2018-11-21 16:44:49.785589;2018-11-21 16:44:49.785591;2018-11-21 16:44:49.785593;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Taiwanese\\;patient|Ethnicity:Taiwanese;Ethnicity;;2018-11-21 16:44:49.785599;2018-11-21 16:44:49.785601;2018-11-21 16:44:49.785603;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Filipino\\;patient|Ethnicity:Filipino;Ethnicity;;2018-11-21 16:44:49.785609;2018-11-21 16:44:49.785611;2018-11-21 16:44:49.785613;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Hmong\\;patient|Ethnicity:Hmong;Ethnicity;;2018-11-21 16:44:49.785619;2018-11-21 16:44:49.785621;2018-11-21 16:44:49.785623;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Indonesian\\;patient|Ethnicity:Indonesian;Ethnicity;;2018-11-21 16:44:49.785629;2018-11-21 16:44:49.785631;2018-11-21 16:44:49.785633;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Japanese\\;patient|Ethnicity:Japanese;Ethnicity;;2018-11-21 16:44:49.785639;2018-11-21 16:44:49.785641;2018-11-21 16:44:49.785643;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Korean\\;patient|Ethnicity:Korean;Ethnicity;;2018-11-21 16:44:49.785651;2018-11-21 16:44:49.785659;2018-11-21 16:44:49.785661;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Laotian\\;patient|Ethnicity:Laotian;Ethnicity;;2018-11-21 16:44:49.785668;2018-11-21 16:44:49.785670;2018-11-21 16:44:49.785671;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Malaysian\\;patient|Ethnicity:Malaysian;Ethnicity;;2018-11-21 16:44:49.785678;2018-11-21 16:44:49.785680;2018-11-21 16:44:49.785681;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Okinawan\\;patient|Ethnicity:Okinawan;Ethnicity;;2018-11-21 16:44:49.785688;2018-11-21 16:44:49.785690;2018-11-21 16:44:49.785692;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Pakistani\\;patient|Ethnicity:Pakistani;Ethnicity;;2018-11-21 16:44:49.785698;2018-11-21 16:44:49.785700;2018-11-21 16:44:49.785702;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Sri Lankan\\;patient|Ethnicity:Sri Lankan;Ethnicity;;2018-11-21 16:44:49.785711;2018-11-21 16:44:49.785713;2018-11-21 16:44:49.785715;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Thai\\;patient|Ethnicity:Thai;Ethnicity;;2018-11-21 16:44:49.785721;2018-11-21 16:44:49.785723;2018-11-21 16:44:49.785725;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Vietnamese\\;patient|Ethnicity:Vietnamese;Ethnicity;;2018-11-21 16:44:49.785731;2018-11-21 16:44:49.785733;2018-11-21 16:44:49.785735;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Iwo Jiman\\;patient|Ethnicity:Iwo Jiman;Ethnicity;;2018-11-21 16:44:49.785742;2018-11-21 16:44:49.785743;2018-11-21 16:44:49.785745;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Maldivian\\;patient|Ethnicity:Maldivian;Ethnicity;;2018-11-21 16:44:49.785752;2018-11-21 16:44:49.785753;2018-11-21 16:44:49.785755;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Nepalese\\;patient|Ethnicity:Nepalese;Ethnicity;;2018-11-21 16:44:49.785762;2018-11-21 16:44:49.785763;2018-11-21 16:44:49.785765;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Singaporean\\;patient|Ethnicity:Singaporean;Ethnicity;;2018-11-21 16:44:49.785772;2018-11-21 16:44:49.785774;2018-11-21 16:44:49.785775;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Madagascar\\;patient|Ethnicity:Madagascar;Ethnicity;;2018-11-21 16:44:49.785782;2018-11-21 16:44:49.785784;2018-11-21 16:44:49.785786;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Black or African American\\;patient|Ethnicity:Black or African American;Ethnicity;;2018-11-21 16:44:49.785793;2018-11-21 16:44:49.785794;2018-11-21 16:44:49.785796;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Black\\;patient|Ethnicity:Black;Ethnicity;;2018-11-21 16:44:49.785803;2018-11-21 16:44:49.785807;2018-11-21 16:44:49.785808;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\African American\\;patient|Ethnicity:African American;Ethnicity;;2018-11-21 16:44:49.785817;2018-11-21 16:44:49.785819;2018-11-21 16:44:49.785821;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\African\\;patient|Ethnicity:African;Ethnicity;;2018-11-21 16:44:49.785829;2018-11-21 16:44:49.785831;2018-11-21 16:44:49.785833;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Bahamian\\;patient|Ethnicity:Bahamian;Ethnicity;;2018-11-21 16:44:49.785840;2018-11-21 16:44:49.785841;2018-11-21 16:44:49.785843;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Barbadian\\;patient|Ethnicity:Barbadian;Ethnicity;;2018-11-21 16:44:49.785850;2018-11-21 16:44:49.785852;2018-11-21 16:44:49.785853;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Dominican\\;patient|Ethnicity:Dominican;Ethnicity;;2018-11-21 16:44:49.785860;2018-11-21 16:44:49.785861;2018-11-21 16:44:49.785863;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Dominica Islander\\;patient|Ethnicity:Dominica Islander;Ethnicity;;2018-11-21 16:44:49.785870;2018-11-21 16:44:49.785871;2018-11-21 16:44:49.785873;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Haitian\\;patient|Ethnicity:Haitian;Ethnicity;;2018-11-21 16:44:49.785880;2018-11-21 16:44:49.785882;2018-11-21 16:44:49.785884;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Jamaican\\;patient|Ethnicity:Jamaican;Ethnicity;;2018-11-21 16:44:49.785893;2018-11-21 16:44:49.785894;2018-11-21 16:44:49.785896;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Tobagoan\\;patient|Ethnicity:Tobagoan;Ethnicity;;2018-11-21 16:44:49.785903;2018-11-21 16:44:49.785905;2018-11-21 16:44:49.785906;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Trinidadian\\;patient|Ethnicity:Trinidadian;Ethnicity;;2018-11-21 16:44:49.785913;2018-11-21 16:44:49.785915;2018-11-21 16:44:49.785916;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\West Indian\\;patient|Ethnicity:West Indian;Ethnicity;;2018-11-21 16:44:49.785923;2018-11-21 16:44:49.785925;2018-11-21 16:44:49.785927;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Native Hawaiian or Other Pacific Islander\\;patient|Ethnicity:Native Hawaiian or Other Pacific Islander;Ethnicity;;2018-11-21 16:44:49.785933;2018-11-21 16:44:49.785935;2018-11-21 16:44:49.785937;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Polynesian\\;patient|Ethnicity:Polynesian;Ethnicity;;2018-11-21 16:44:49.785944;2018-11-21 16:44:49.785947;2018-11-21 16:44:49.785949;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Micronesian\\;patient|Ethnicity:Micronesian;Ethnicity;;2018-11-21 16:44:49.785956;2018-11-21 16:44:49.785958;2018-11-21 16:44:49.785959;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Melanesian\\;patient|Ethnicity:Melanesian;Ethnicity;;2018-11-21 16:44:49.785966;2018-11-21 16:44:49.785968;2018-11-21 16:44:49.785969;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Other Pacific Islander\\;patient|Ethnicity:Other Pacific Islander;Ethnicity;;2018-11-21 16:44:49.785976;2018-11-21 16:44:49.785978;2018-11-21 16:44:49.785980;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\White\\;patient|Ethnicity:White;Ethnicity;;2018-11-21 16:44:49.785988;2018-11-21 16:44:49.785990;2018-11-21 16:44:49.785992;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\European\\;patient|Ethnicity:European;Ethnicity;;2018-11-21 16:44:49.785998;2018-11-21 16:44:49.786000;2018-11-21 16:44:49.786002;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Middle Eastern or North African\\;patient|Ethnicity:Middle Eastern or North African;Ethnicity;;2018-11-21 16:44:49.786009;2018-11-21 16:44:49.786011;2018-11-21 16:44:49.786012;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Arab\\;patient|Ethnicity:Arab;Ethnicity;;2018-11-21 16:44:49.786019;2018-11-21 16:44:49.786021;2018-11-21 16:44:49.786023;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\Ethnicity\\Unknown\\;patient|Ethnicity:Unknown;Ethnicity;;2018-11-21 16:44:49.786029;2018-11-21 16:44:49.786031;2018-11-21 16:44:49.786033;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\BirthDate\\;patient|BirthDate;BirthDate;;2018-11-21 16:44:49.786152;2018-11-21 16:44:49.786155;2018-11-21 16:44:49.786156;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\DeathDate\\;patient|DeathDate;DeathDate;;2018-11-21 16:44:49.786206;2018-11-21 16:44:49.786208;2018-11-21 16:44:49.786210;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\ProviderCenterId\\;patient|ProviderCenterId;ProviderCenterId;;2018-11-21 16:44:49.786253;2018-11-21 16:44:49.786256;2018-11-21 16:44:49.786258;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\OriginCenterId\\;patient|OriginCenterId;OriginCenterId;;2018-11-21 16:44:49.786300;2018-11-21 16:44:49.786303;2018-11-21 16:44:49.786304;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\;ID_10;CauseOfDeath;;2018-11-21 16:44:49.786345;2018-11-21 16:44:49.786348;2018-11-21 16:44:49.786349;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Death of unknown cause\\;patient|CauseOfDeath:Death of unknown cause;CauseOfDeath;;2018-11-21 16:44:50.467145;2018-11-21 16:44:50.467156;2018-11-21 16:44:50.467158;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Other cancer\\;patient|CauseOfDeath:Other cancer;CauseOfDeath;;2018-11-21 16:44:50.467413;2018-11-21 16:44:50.467418;2018-11-21 16:44:50.467420;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Other cause\\;patient|CauseOfDeath:Other cause;CauseOfDeath;;2018-11-21 16:44:50.467433;2018-11-21 16:44:50.467435;2018-11-21 16:44:50.467437;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Complications of treatment\\;patient|CauseOfDeath:Complications of treatment;CauseOfDeath;;2018-11-21 16:44:50.467447;2018-11-21 16:44:50.467449;2018-11-21 16:44:50.467451;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Neoplasm\\;patient|CauseOfDeath:Neoplasm;CauseOfDeath;;2018-11-21 16:44:50.467459;2018-11-21 16:44:50.467462;2018-11-21 16:44:50.467464;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\CauseOfDeath\\Unknown\\;patient|CauseOfDeath:Unknown;CauseOfDeath;;2018-11-21 16:44:50.467472;2018-11-21 16:44:50.467474;2018-11-21 16:44:50.467476;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\LastNewsDate\\;patient|LastNewsDate;LastNewsDate;;2018-11-21 16:44:50.467567;2018-11-21 16:44:50.467570;2018-11-21 16:44:50.467572;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\LastNewsStatus\\;ID_12;LastNewsStatus;;2018-11-21 16:44:50.467630;2018-11-21 16:44:50.467633;2018-11-21 16:44:50.467635;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\LastNewsStatus\\Alive (finding)\\;patient|LastNewsStatus:Alive (finding);LastNewsStatus;;2018-11-21 16:44:51.107337;2018-11-21 16:44:51.107346;2018-11-21 16:44:51.107348;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\LastNewsStatus\\Patient Outcome - Died\\;patient|LastNewsStatus:Patient Outcome - Died;LastNewsStatus;;2018-11-21 16:44:51.107557;2018-11-21 16:44:51.107560;2018-11-21 16:44:51.107562;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\patient\\LastNewsStatus\\Unknown\\;patient|LastNewsStatus:Unknown;LastNewsStatus;;2018-11-21 16:44:51.107570;2018-11-21 16:44:51.107572;2018-11-21 16:44:51.107574;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\;ID_14;tumorPathologyEvent;;2018-11-21 16:44:51.107654;2018-11-21 16:44:51.107657;2018-11-21 16:44:51.107658;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\Type\\;ID_15;Type;;2018-11-21 16:44:51.107693;2018-11-21 16:44:51.107696;2018-11-21 16:44:51.107697;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\StartDate\\;ID_16;StartDate;;2018-11-21 16:44:51.107721;2018-11-21 16:44:51.107723;2018-11-21 16:44:51.107725;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\EndDate\\;ID_17;EndDate;;2018-11-21 16:44:51.107747;2018-11-21 16:44:51.107749;2018-11-21 16:44:51.107751;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\PerformanceStatus\\;ID_18;PerformanceStatus;;2018-11-21 16:44:51.107773;2018-11-21 16:44:51.107775;2018-11-21 16:44:51.107777;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\G8\\;ID_19;G8;;2018-11-21 16:44:51.107799;2018-11-21 16:44:51.107801;2018-11-21 16:44:51.107803;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\HistologicalGradeType\\;ID_20;HistologicalGradeType;;2018-11-21 16:44:51.107824;2018-11-21 16:44:51.107827;2018-11-21 16:44:51.107828;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\HistologicalGradeValue\\;ID_21;HistologicalGradeValue;;2018-11-21 16:44:51.107850;2018-11-21 16:44:51.107852;2018-11-21 16:44:51.107854;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\StadeType\\;ID_22;StadeType;;2018-11-21 16:44:51.107876;2018-11-21 16:44:51.107878;2018-11-21 16:44:51.107880;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\StadeValue\\;ID_23;StadeValue;;2018-11-21 16:44:51.107903;2018-11-21 16:44:51.107905;2018-11-21 16:44:51.107907;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\DiagnosisDate\\;ID_24;DiagnosisDate;;2018-11-21 16:44:51.107929;2018-11-21 16:44:51.107931;2018-11-21 16:44:51.107933;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\TopographyCode\\;ID_25;TopographyCode;;2018-11-21 16:44:51.107954;2018-11-21 16:44:51.107957;2018-11-21 16:44:51.107958;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\MorphologyCode\\;ID_26;MorphologyCode;;2018-11-21 16:44:51.107982;2018-11-21 16:44:51.107985;2018-11-21 16:44:51.107986;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\tumorPathologyEvent\\Laterality\\;ID_27;Laterality;;2018-11-21 16:44:51.108009;2018-11-21 16:44:51.108011;2018-11-21 16:44:51.108013;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\TNM\\;ID_28;TNM;;2018-11-21 16:44:51.108044;2018-11-21 16:44:51.108046;2018-11-21 16:44:51.108048;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\Treatment\\;ID_34;Treatment;;2018-11-21 16:44:51.108351;2018-11-21 16:44:51.108353;2018-11-21 16:44:51.108355;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\ResponseEvaluation\\;ID_48;ResponseEvaluation;;2018-11-21 16:44:51.109120;2018-11-21 16:44:51.109123;2018-11-21 16:44:51.109125;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\AdverseEvent\\;ID_51;AdverseEvent;;2018-11-21 16:44:51.109274;2018-11-21 16:44:51.109277;2018-11-21 16:44:51.109278;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\BiologicalSample\\;ID_199;BiologicalSample;;2018-11-21 16:44:51.109531;2018-11-21 16:44:51.109533;2018-11-21 16:44:51.109535;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\Biomarker\\;ID_208;Biomarker;;2018-11-21 16:44:51.110019;2018-11-21 16:44:51.110021;2018-11-21 16:44:51.110023;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\Drug\\;ID_56;Drug;;2018-11-21 16:44:51.110218;2018-11-21 16:44:51.110220;2018-11-21 16:44:51.110222;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\Consent\\;ID_70;Consent;;2018-11-21 16:44:51.110835;2018-11-21 16:44:51.110837;2018-11-21 16:44:51.110839;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\RelatedPathology\\;ID_73;RelatedPathology;;2018-11-21 16:44:51.110996;2018-11-21 16:44:51.110999;2018-11-21 16:44:51.111000;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\FamilyCancerHistory\\;ID_77;FamilyCancerHistory;;2018-11-21 16:44:51.111202;2018-11-21 16:44:51.111204;2018-11-21 16:44:51.111206;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\Annotation\\;ID_80;Annotation;;2018-11-21 16:44:51.111344;2018-11-21 16:44:51.111347;2018-11-21 16:44:51.111348;TEST_OSIRIS;None
+\\i2b2\\OSIRIS\\AlterationOnSample\\;ID_149;AlterationOnSample;;2018-11-21 16:44:51.114597;2018-11-21 16:44:51.114599;2018-11-21 16:44:51.114601;TEST_OSIRIS;None

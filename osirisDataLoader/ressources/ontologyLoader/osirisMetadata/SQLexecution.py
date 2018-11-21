@@ -38,7 +38,7 @@ class i2b2_interaction:
 			return cur
 
 		return None
-    
+
     ###### Ajout vianney méthode pour créer la table ################"
 	def create_metadata_table(self,table,schema) :
 		create_script = "CREATE TABLE "+ schema+"."+table.upper()
@@ -68,7 +68,7 @@ class i2b2_interaction:
 		create_script += "C_PATH	VARCHAR(700)   NULL,"
 		create_script += "C_SYMBOL	VARCHAR(50)	NULL"
 		create_script += ") ;"
-   
+
 		create_fullname_index = "CREATE INDEX META_FULLNAME_IDX_"+table+" ON "+schema+"."+table+"(C_FULLNAME)"
 		create_applied_index = "CREATE INDEX META_APPLIED_PATH_IDX_"+table+" ON "+schema+"."+table+"(M_APPLIED_PATH)"
 		create_exclusion_index = "CREATE INDEX META_EXCLUSION_IDX_"+table+" ON "+schema+"."+table+"(M_EXCLUSION_CD)"
@@ -84,7 +84,7 @@ class i2b2_interaction:
 		cur.execute(create_hlevel_index)
 		cur.execute(create_synonym_index)
 		self.dbcon.commit()
-		
+
 	###### Ajout du chemin dans table_access ################"
 	def insert_table_access(self,table,schema) :
 		delete_table_access="DELETE FROM "+schema+".table_access where c_fullname='\\i2b2\\OSIRIS\\\'"
@@ -94,15 +94,16 @@ class i2b2_interaction:
 		self.dbcon.commit()
 		cur.execute(insert_table_access)
 		self.dbcon.commit()
-		
-		
+
+
+
 	def send_data (self, input_file, table) :
 		f = open (input_file, 'r')
 		cursor = self.connect_i2b2()
 		#cursor.execute(request_i2b2.encode('utf-8'))
 		cursor.copy_from(f, table, sep=';', null='None')
 		f.close()
-		
+
 	def send_data_2 (self, input_file, table,columns_def) :
 		f = open (input_file, 'r')
 		cursor = self.connect_i2b2()
@@ -111,4 +112,8 @@ class i2b2_interaction:
 			columns=columns_def)
 		f.close()
 
-
+	def truncate_data (self,schema,table) :
+		truncate_data_sql="TRUNCATE TABLE " +schema+ "." + table
+		cur = self.connect_i2b2()
+		cur.execute(truncate_data_sql)
+		self.dbcon.commit()
