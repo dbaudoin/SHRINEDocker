@@ -117,3 +117,23 @@ class i2b2_interaction:
 		cur = self.connect_i2b2()
 		cur.execute(truncate_data_sql)
 		self.dbcon.commit()
+
+	def create_concept_dimension_file (self) :
+		concept_dimension = open ('/opt/data_to_load/concept_dimension.txt', 'w')
+		insert_data_sql="""
+			SELECT distinct c_fullname,C_BASECODE,C_NAME,' ' as concept_blob,update_date,download_date,import_date,sourcesystem_cd,'1' as t
+			FROM i2b2metadata.osiris
+			WHERE C_VISUALATTRIBUTES like 'L%'
+		"""
+		cursor = self.connect_i2b2()
+		cursor.execute(insert_data_sql)
+
+		for row in cursor:
+			for i in range(0,9):
+				t=str(row[i]).replace("\\","\\\\")
+				if i == 8 :
+					concept_dimension.write(t+ "\n")
+				else:
+					concept_dimension.write(t + ";")
+
+		concept_dimension.close()
