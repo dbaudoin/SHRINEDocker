@@ -42,25 +42,25 @@ def download_pivot_file(dic_db_param, dic_pivot_files):
     pivot.add_patient_dimension(dic_patient, dic_db_param)
     pivot.add_visit_dimension(dic_visit, dic_db_param)
 
-    # add biological sample
-    BioSample = lecture_csv_file(dic_pivot_files['BioSample'], ',')
-    dic_BioSample = BioSample.copy_csv_file()
-    pivot.add_file_into_data(dic_BioSample, 'OSIRIS_pivot_BiologicalSample.csv')
-
-    # add Analysis
-    Analysis = lecture_csv_file(dic_pivot_files['Analysis'], ',')
-    dic_Analysis = Analysis.copy_csv_file()
-    pivot.add_file_into_data(dic_Analysis, 'OSIRIS_pivot_Analysis.csv')
-
-    # add BioMarker
-    BioMarker = lecture_csv_file(dic_pivot_files['BioMarker'], ',')
-    dic_BioMarker = BioMarker.copy_csv_file()
-    pivot.add_file_into_data(dic_BioMarker, 'OSIRIS_pivot_Biomarker.csv')
-
-    # add Consent
-    Consent = lecture_csv_file(dic_pivot_files['Consent'], ',')
-    dic_Consent = Consent.copy_csv_file()
-    pivot.add_file_into_data(dic_Consent, 'OSIRIS_pivot_Consent.csv')
+    # # add biological sample
+    # BioSample = lecture_csv_file(dic_pivot_files['BioSample'], ',')
+    # dic_BioSample = BioSample.copy_csv_file()
+    # pivot.add_file_into_data(dic_BioSample, 'OSIRIS_pivot_BiologicalSample.csv')
+    #
+    # # add Analysis
+    # Analysis = lecture_csv_file(dic_pivot_files['Analysis'], ',')
+    # dic_Analysis = Analysis.copy_csv_file()
+    # pivot.add_file_into_data(dic_Analysis, 'OSIRIS_pivot_Analysis.csv')
+    #
+    # # add BioMarker
+    # BioMarker = lecture_csv_file(dic_pivot_files['BioMarker'], ',')
+    # dic_BioMarker = BioMarker.copy_csv_file()
+    # pivot.add_file_into_data(dic_BioMarker, 'OSIRIS_pivot_Biomarker.csv')
+    #
+    # # add Consent
+    # Consent = lecture_csv_file(dic_pivot_files['Consent'], ',')
+    # dic_Consent = Consent.copy_csv_file()
+    # pivot.add_file_into_data(dic_Consent, 'OSIRIS_pivot_Consent.csv')
 
     # add all file in pivot_files (all file who is reading is indicating in ref_files)
     '''
