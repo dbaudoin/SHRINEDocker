@@ -44,9 +44,9 @@ class mapping_osiris:
         return id_var
 
     def searchModalityID(self,i2b2_concept, mod):
-        print(i2b2_concept)
+        # print(i2b2_concept)
         concept_moda = re.findall('\|[^\|]*:[a-zA-Z0-9]*', i2b2_concept)[0][1:]
-        print(concept_moda)
+        # print(concept_moda)
         if concept_moda == mod: return mod
         return None
 
