@@ -249,7 +249,7 @@ def main():
     dic_pivot_files = {}
     dic_pivot_files['mappings_file'] = path_to_mapping + 'i2b2_mapppings.txt'
     dic_pivot_files['dep_files'] = path_to_scripts + 'map_pivot_dic'
-    dic_pivot_files['incre_patient'] = path_to_scripts + 'patient_increment.txt'
+    dic_pivot_files['incre_patient'] = path_to_mapping + 'patient_increment.txt'
     dic_pivot_files['metadata_file'] = path_to_data + 'i2b2_OSIRIS_meta.csv'
     dic_pivot_files['patient'] = path_to_data + 'OSIRIS_pivot_Patient.csv'
     dic_pivot_files['visit'] = path_to_data + 'OSIRIS_pivot_TumorPathologyEvent.csv'
