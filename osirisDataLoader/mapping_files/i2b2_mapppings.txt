@@ -1,0 +1,7 @@
+concept,column,start_date,end_date
+Patient,LastNewsStatus,LastNewsDate,
+TumorPathologyEvent,Type,StartDate,EndDate
+TumorPathologyEvent,TopographyCode,StartDate,EndDate
+TumorPathologyEvent,MorphologyCode,StartDate,EndDate
+TumorPathologyEvent,Laterality,StartDate,EndDate
+Treatment,Treatment,StartDate,EndDate

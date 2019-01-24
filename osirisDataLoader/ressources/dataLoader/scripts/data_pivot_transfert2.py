@@ -225,7 +225,7 @@ def main():
 
     path_to_scripts='/opt/dataLoader/scripts/'
     path_to_data='/opt/data_to_load/'
-
+    path_to_mapping = '/opt/mapping_files/'
     # DB parameters
     dic_db_param = {}
     dic_db_param['DB_host'] = os.environ['I2B2_DB_HOST']
@@ -247,7 +247,7 @@ def main():
 
     # list des fichiers (modifier le path si necessaire)
     dic_pivot_files = {}
-    dic_pivot_files['mappings_file'] = path_to_data + 'see3i2b2_mapppings.txt'
+    dic_pivot_files['mappings_file'] = path_to_mapping + 'i2b2_mapppings.txt'
     dic_pivot_files['dep_files'] = path_to_scripts + 'map_pivot_dic'
     dic_pivot_files['incre_patient'] = path_to_scripts + 'patient_increment.txt'
     dic_pivot_files['metadata_file'] = path_to_data + 'i2b2_OSIRIS_meta.csv'
