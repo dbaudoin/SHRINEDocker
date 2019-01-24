@@ -94,6 +94,7 @@ def transfert (path_metafile, path_conceptfile, path_modiffile, path_shrine):
 	DB_password = os.environ['i2b2_db_pass_ONT']
 	execution = i2b2_interaction(DB_type, DB_host, DB_name, DB_port, BD_user, DB_password)
 	execution.create_concept_dimension_file()
+	execution.create_modifier_dimension_file()
 	BD_user = os.environ['i2b2_db_user_CRC']
 	DB_password = os.environ['i2b2_db_pass_CRC']
 	execution = i2b2_interaction(DB_type, DB_host, DB_name, DB_port, BD_user, DB_password)
@@ -112,10 +113,10 @@ def transfert (path_metafile, path_conceptfile, path_modiffile, path_shrine):
 
 def main():
 
-	path_metafile = '/opt/ontologyLoader/osirisMetadata/see2i2b2_meta.txt'
+	path_metafile = '/opt/ontologyLoader/osirisMetadata/see3i2b2_meta.txt'
 	path_conceptfile = '/opt/data_to_load/concept_dimension.txt'
-	path_modiffile = '/opt/ontologyLoader/osirisMetadata/see2i2b2_modif.txt'
-	path_shrine = '/opt/ontologyLoader/osirisMetadata/see2shrine_.txt'
+	path_modiffile = '/opt/data_to_load/modifier_dimension.txt'
+	path_shrine = '/opt/ontologyLoader/osirisMetadata/see3shrine_.txt'
 
 	transfert (path_metafile, path_conceptfile, path_modiffile, path_shrine)
 

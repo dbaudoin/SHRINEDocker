@@ -5,7 +5,7 @@ Created 2018/05/28
 @author: david
 script de transfert des donnees issu du pivot vers la base de donnees i2b2
 """
-import re, sys, pprint,os
+import re, sys, pprint, os
 from script_pivot_transfert.lect_file import lecture_csv_file
 from script_pivot_transfert.generate_pivot_json import PivotData
 from script_pivot_transfert.SQLexecution import i2b2_interaction
@@ -42,43 +42,41 @@ def download_pivot_file(dic_db_param, dic_pivot_files):
     pivot.add_patient_dimension(dic_patient, dic_db_param)
     pivot.add_visit_dimension(dic_visit, dic_db_param)
 
-    # # add biological sample
-    # BioSample = lecture_csv_file(dic_pivot_files['BioSample'], ',')
-    # dic_BioSample = BioSample.copy_csv_file()
-    # pivot.add_file_into_data(dic_BioSample, 'OSIRIS_pivot_BiologicalSample.csv')
-    #
-    # # add Analysis
-    # Analysis = lecture_csv_file(dic_pivot_files['Analysis'], ',')
-    # dic_Analysis = Analysis.copy_csv_file()
-    # pivot.add_file_into_data(dic_Analysis, 'OSIRIS_pivot_Analysis.csv')
-    #
-    # # add BioMarker
-    # BioMarker = lecture_csv_file(dic_pivot_files['BioMarker'], ',')
-    # dic_BioMarker = BioMarker.copy_csv_file()
-    # pivot.add_file_into_data(dic_BioMarker, 'OSIRIS_pivot_Biomarker.csv')
-    #
-    # # add Consent
-    # Consent = lecture_csv_file(dic_pivot_files['Consent'], ',')
-    # dic_Consent = Consent.copy_csv_file()
-    # pivot.add_file_into_data(dic_Consent, 'OSIRIS_pivot_Consent.csv')
+    '''
+    # add biological sample
+    BioSample = lecture_csv_file(dic_pivot_files['BioSample'], ',')
+    dic_BioSample = BioSample.copy_csv_file()
+    pivot.add_file_into_data(dic_BioSample, 'OSIRIS_pivot_BiologicalSample.csv')
+
+    # add Analysis
+    Analysis = lecture_csv_file(dic_pivot_files['Analysis'], ',')
+    dic_Analysis = Analysis.copy_csv_file()
+    pivot.add_file_into_data(dic_Analysis, 'OSIRIS_pivot_Analysis.csv')
+
+    # add BioMarker
+    BioMarker = lecture_csv_file(dic_pivot_files['BioMarker'], ',')
+    dic_BioMarker = BioMarker.copy_csv_file()
+    pivot.add_file_into_data(dic_BioMarker, 'OSIRIS_pivot_Biomarker.csv')
+
+    # add Consent
+    Consent = lecture_csv_file(dic_pivot_files['Consent'], ',')
+    dic_Consent = Consent.copy_csv_file()
+    pivot.add_file_into_data(dic_Consent, 'OSIRIS_pivot_Consent.csv')
+    '''
 
     # add all file in pivot_files (all file who is reading is indicating in ref_files)
-    '''
-    dic_files = {}
-    for ref_file_key in dic_ref_files['filename']:
-        add_file = lecture_csv_file('map_data/' + ref_file_key, ',')
-        test_file_found = True
-        try:
-            dic_files[ref_file_key] = add_file.copy_csv_file()
-        except:
-            print(ref_file_key + ' not found')
-            test_file_found = False
-        if test_file_found :
-            try:
-                pivot.add_file_into_data(dic_files[ref_file_key], ref_file_key)
-            except:
-                print(pivot.error_message)
-    '''
+    list_file = lecture_csv_file(dic_pivot_files['dep_files'], ';')
+    dic_listfiles = list_file.copy_csv_file()
+    for file in list_file.dic_data['filename'][2:]:
+        dic_files = {}
+        if file in os.listdir(dic_db_param['path_to_data']):
+            print(file)
+            dataFile = lecture_csv_file(dic_db_param['path_to_data'] + file, ',')
+            dic_files = dataFile.copy_csv_file()
+            pivot.add_file_into_data(dic_files, file)
+        else: break
+
+    # pprint.pprint(pivot.dicData)
     return pivot
 
 
@@ -109,7 +107,7 @@ def load_i2b2_metadata(dic_db_param, sql_file):
     return dic_i2b2_metadata
 
 def match_i2b2_metadata_with_dic_pivot(pivot, concept_to_transfert, modifier_to_transfert, outputfile, logfile,
-                                       dic_db_param):
+                                       dic_db_param, dic_pivot_files,mappings):
     i = 0
     f_output = open(outputfile, 'w')
     #pprint.pprint(pivot.dicData)
@@ -119,17 +117,20 @@ def match_i2b2_metadata_with_dic_pivot(pivot, concept_to_transfert, modifier_to_
                                     dic_db_param['DB_port'], dic_db_param['BD_user'], dic_db_param['DB_password'])
 
     # cas concept (patient et visit)
-    obj_mapping = mapping_osiris(pivot, concept_to_transfert, dic_db_param['source'])
+    metadata_file = lecture_csv_file(dic_pivot_files['metadata_file'], ';')
+    dic_metadata_file = metadata_file.copy_csv_file()
+    # pprint.pprint(pivot.list_key_ref)
+    obj_mapping = mapping_osiris(pivot, concept_to_transfert, dic_metadata_file, dic_db_param['source'])
     for metadata in concept_to_transfert['concept_cd']:
 
-        i2b2_var = metadata
+        i2b2_var = concept_to_transfert['column'][i]
         i2b2_table_cible = concept_to_transfert['file'][i]
         i2b2_type = concept_to_transfert['type_var_i2b2'][i]
         i2b2_concept_ref = concept_to_transfert['concept_cd'][i]
         # search data info from metadata
         link_map_data = obj_mapping.find_refvar_in_pivot(concept_to_transfert['column'][i])
 
-        # pprint.pprint(i2b2_var)
+        # pprint.pprint(link_map_data)
         # pprint.pprint(i2b2_table_cible)
         # pprint.pprint(i2b2_type)
 
@@ -138,31 +139,63 @@ def match_i2b2_metadata_with_dic_pivot(pivot, concept_to_transfert, modifier_to_
 
                 # select all data needed
                 if i2b2_table_cible.lower() == 'patient':
-                    dic_data_spe = obj_mapping.transfert_patient_from_pivot(i2b2_var, patient, i2b2_concept_ref)
+                    dic_data_spe = obj_mapping.transfert_patient_from_pivot_with_mappings(i2b2_var, patient, i2b2_concept_ref,mappings)
+                    # print(dic_data_spe)
                     # build insert request
-                    if (dic_data_spe['tvalue'] != None or dic_data_spe['nvalue'] != None) and dic_data_spe['concept_cd'] != None :
+                    if dic_data_spe['tvalue'] != None or dic_data_spe['nvalue'] != None :
                         interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe), obj_mapping.listvar)
                     # copy resquest to outputfile
                     # f_output.writelines(req.write_insert_i2b2_data(dic_data_spe))
 
                 else:
+                    # pprint.pprint(pivot.list_key_ref[link_map_data]['listPatient'][patient])
                     for visit in pivot.list_key_ref[link_map_data]['listPatient'][patient]:
-                        dic_data_spe = obj_mapping.transfert_concept_from_pivot(i2b2_var, patient, i2b2_concept_ref, visit)
+                        dic_data_spe = obj_mapping.transfert_concept_from_pivot_with_mappings(i2b2_var, patient, i2b2_concept_ref, visit,mappings)
+                        # pprint.pprint(dic_data_spe)
                         if dic_data_spe['tvalue'] != None or dic_data_spe['nvalue'] != None:
                             interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe), obj_mapping.listvar)
                         # add cas tumorPathologyEvent
-                        if i2b2_table_cible == 'tumorPathologyEvent':
-                            dic_data_spe['table'] = 'visit_dimension'
-                            # interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe),
-                                                     # [dic_data_spe['tvalue'], dic_data_spe['patient_num'],
-                                                      # dic_data_spe['visit_num']])
+                        # if i2b2_table_cible == 'tumorPathologyEvent':
+                        #     dic_data_spe['table'] = 'visit_dimension'
+                        #     interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe),
+                        #                              [dic_data_spe['tvalue'], dic_data_spe['patient_num'],
+                        #                               dic_data_spe['visit_num']])
 
         i += 1
 
     # cas modifier
     '''    '''
 
+    i = 0
+
+    for metadata in modifier_to_transfert['concept_cd']:
+
+        i2b2_var = metadata
+        i2b2_table_cible = concept_to_transfert['file'][i]
+        i2b2_type = concept_to_transfert['type_var_i2b2'][i]
+        # ici modifier_cd = concept_cd
+        i2b2_modifier_ref = concept_to_transfert['concept_cd'][i]
+        # search data info from metadata
+        link_map_data = obj_mapping.find_refvar_in_pivot(concept_to_transfert['column'][i])
+
+        # pprint.pprint(i2b2_var)
+        # pprint.pprint(i2b2_table_cible)
+        # pprint.pprint(i2b2_type)
+
+        link_map_data = obj_mapping.find_refvar_in_pivot(concept_to_transfert['column'][i])
+
+        if link_map_data != None:
+            for patient in pivot.list_key_ref[link_map_data]['listPatient']:
+                for instance in pivot.list_key_ref[link_map_data]['listPatient'][patient]:
+                    # i2b2_var, patient, i2b2_modifier, visit, instance, i2b2_concept_ref
+                    # pprint.pprint(pivot.list_key_ref[link_map_data]['listPatient'][patient][instance])
+                    # visit = pivot.list_key_ref[link_map_data]['listPatient'][patient][instance]['TumorPathologyEvent_Ref']
+                    dic_data_spe = obj_mapping.transfert_modifier_from_pivot(i2b2_var, patient, i2b2_modifier_ref, visit, instance, 'concept_to_define')
+                    if dic_data_spe['tvalue'] != None or dic_data_spe['nvalue'] != None:
+                        interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe), obj_mapping.listvar)
+        i += 1
     f_output.close()
+
 
 
 def tranfo_data(dic_db_param, dic_pivot_files):
@@ -174,6 +207,9 @@ def tranfo_data(dic_db_param, dic_pivot_files):
     # pprint.pprint(pivot.list_key_ref['TumorPathologyEvent_Ref']['listPatient'])
 
     # import i2b2 metadata file
+    mappings_file = lecture_csv_file(dic_pivot_files['mappings_file'] ,',')
+    mappings = mappings_file.copy_csv_file()
+
     concept_to_transfert = load_i2b2_metadata(dic_db_param, dic_db_param['concept_sql'])
     modifier_to_transfert = load_i2b2_metadata(dic_db_param, dic_db_param['modifier_sql'])
 
@@ -181,12 +217,12 @@ def tranfo_data(dic_db_param, dic_pivot_files):
 
     # map i2b2 metadata to json file
     match_i2b2_metadata_with_dic_pivot(pivot, concept_to_transfert, modifier_to_transfert, dic_db_param['output_file'],
-                                       dic_db_param['log_file'], dic_db_param)
+                                       dic_db_param['log_file'], dic_db_param, dic_pivot_files,mappings)
 
     # print(metadata_to_transfert)
 
-
 def main():
+
     path_to_scripts='/opt/dataLoader/scripts/'
     path_to_data='/opt/data_to_load/'
 
@@ -195,31 +231,33 @@ def main():
     dic_db_param['DB_host'] = os.environ['I2B2_DB_HOST']
     dic_db_param['DB_name'] = os.environ['POSTGRES_DB']
     dic_db_param['DB_port'] = os.environ['I2B2_DB_PORT']
-    dic_db_param['BD_user'] =  os.environ['POSTGRES_USER']
+    dic_db_param['BD_user'] = os.environ['POSTGRES_USER']
     dic_db_param['DB_password'] = os.environ['POSTGRES_PASSWORD']
     dic_db_param['DB_type'] = os.environ['SERVER_TYPE']
     dic_db_param['path_to_scripts'] = path_to_scripts
+    dic_db_param['path_to_data'] = path_to_data
     dic_db_param['patvis_sql'] = 'select_i2b2_metadata.sql'
     dic_db_param['conceptmodif_sql'] = 'select_concept_modif_id.sql'
     dic_db_param['modifier_sql'] = 'select_all_modifier_OSIRIS.sql'
     dic_db_param['concept_sql'] = 'select_all_concept_OSIRIS.sql'
+    dic_db_param['concept_link'] = 'select_link_concept_OSIRIS.sql'
     dic_db_param['output_file'] = 'osiris_test_logfile.csv'
     dic_db_param['log_file'] = 'osiris_test_output.csv'
     dic_db_param['source'] = 'TEST_OSIRIS'
 
-
-
     # list des fichiers (modifier le path si necessaire)
     dic_pivot_files = {}
+    dic_pivot_files['mappings_file'] = path_to_data + 'see3i2b2_mapppings.txt'
     dic_pivot_files['dep_files'] = path_to_scripts + 'map_pivot_dic'
     dic_pivot_files['incre_patient'] = path_to_scripts + 'patient_increment.txt'
     dic_pivot_files['metadata_file'] = path_to_data + 'i2b2_OSIRIS_meta.csv'
     dic_pivot_files['patient'] = path_to_data + 'OSIRIS_pivot_Patient.csv'
     dic_pivot_files['visit'] = path_to_data + 'OSIRIS_pivot_TumorPathologyEvent.csv'
     dic_pivot_files['BioSample'] = path_to_data + 'OSIRIS_pivot_BiologicalSample.csv'
-    dic_pivot_files['Analysis'] = path_to_data + 'OSIRIS_pivot_Analysis.csv'
-    dic_pivot_files['BioMarker'] = path_to_data + 'OSIRIS_pivot_Biomarker.csv'
-    dic_pivot_files['Consent'] = path_to_data + 'OSIRIS_pivot_Consent.csv'
+    # dic_pivot_files['Analysis'] = path_to_data + 'OSIRIS_pivot_Analysis.csv'
+    # dic_pivot_files['BioMarker'] = path_to_data + 'OSIRIS_pivot_Biomarker.csv'
+    # dic_pivot_files['Consent'] = path_to_data + 'OSIRIS_pivot_Consent.csv'
+
 
     tranfo_data(dic_db_param, dic_pivot_files)
 

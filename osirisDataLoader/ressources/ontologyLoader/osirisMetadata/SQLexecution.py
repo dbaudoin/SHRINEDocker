@@ -48,7 +48,7 @@ class i2b2_interaction:
 		create_script += "C_SYNONYM_CD CHAR(1)		NOT NULL, "
 		create_script += "C_VISUALATTRIBUTES CHAR(3)	NOT NULL, "
 		create_script += "C_TOTALNUM INT			NULL, "
-		create_script += "C_BASECODE VARCHAR(50)	NULL, "
+		create_script += "C_BASECODE VARCHAR(200)	NULL, "
 		create_script += "C_METADATAXML TEXT		NULL, "
 		create_script += "C_FACTTABLECOLUMN VARCHAR(50)	NOT NULL, "
 		create_script += "C_TABLENAME VARCHAR(50)	NOT NULL, "
@@ -124,6 +124,26 @@ class i2b2_interaction:
 			SELECT distinct c_fullname,C_BASECODE,C_NAME,' ' as concept_blob,update_date,download_date,import_date,sourcesystem_cd,'1' as t
 			FROM i2b2metadata.osiris
 			WHERE C_VISUALATTRIBUTES like 'L%'
+		"""
+		cursor = self.connect_i2b2()
+		cursor.execute(insert_data_sql)
+
+		for row in cursor:
+			for i in range(0,9):
+				t=str(row[i]).replace("\\","\\\\")
+				if i == 8 :
+					concept_dimension.write(t+ "\n")
+				else:
+					concept_dimension.write(t + ";")
+
+		concept_dimension.close()
+
+	def create_modifier_dimension_file (self) :
+		concept_dimension = open ('/opt/data_to_load/modifier_dimension.txt', 'w')
+		insert_data_sql="""
+			SELECT distinct c_fullname,C_BASECODE,C_NAME,' ' as concept_blob,update_date,download_date,import_date,sourcesystem_cd,'1' as t
+			FROM i2b2metadata.osiris
+			WHERE C_VISUALATTRIBUTES like 'R%'
 		"""
 		cursor = self.connect_i2b2()
 		cursor.execute(insert_data_sql)

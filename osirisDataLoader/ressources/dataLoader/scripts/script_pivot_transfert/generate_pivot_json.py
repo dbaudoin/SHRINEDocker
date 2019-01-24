@@ -38,7 +38,10 @@ class PivotData:
         return key_ref
 
     def add_var_to_dic_ref (self, ref_var, var):
-        #print (len(re.match('.*_', var).group(0)))
+        # print (var)
+        # print (len(re.match('.*_', var).group(0)))
+        # print ("test")
+        # print (self.list_key_ref[ref_var]['var'])
         self.list_key_ref[ref_var]['var'].append(var[len(re.match('.*_', var).group(0)):])
 
     def add_patient_dimension(self, dic_patient, dic_db_param):
@@ -100,6 +103,7 @@ class PivotData:
         iaf = 0
         var_ref = self.search_ref(dic_file, name_file)
         for varfile in dic_file:
+            print(var_ref)
             self.add_var_to_dic_ref(var_ref, varfile)
         for patient in dic_file[self.link_patient]:
             idp = dic_file[self.link_modifier][iaf]
