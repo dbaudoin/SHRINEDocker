@@ -68,6 +68,7 @@ def download_pivot_file(dic_db_param, dic_pivot_files):
     list_file = lecture_csv_file(dic_pivot_files['dep_files'], ';')
     dic_listfiles = list_file.copy_csv_file()
     for file in list_file.dic_data['filename'][2:]:
+        print(os.listdir(dic_db_param['path_to_data']))
         dic_files = {}
         if file in os.listdir(dic_db_param['path_to_data']):
             print(file)
@@ -76,7 +77,7 @@ def download_pivot_file(dic_db_param, dic_pivot_files):
             pivot.add_file_into_data(dic_files, file)
         else: break
 
-    # pprint.pprint(pivot.dicData)
+    pprint.pprint(pivot.list_key_ref)
     return pivot
 
 
@@ -190,7 +191,7 @@ def match_i2b2_metadata_with_dic_pivot(pivot, concept_to_transfert, modifier_to_
                     # i2b2_var, patient, i2b2_modifier, visit, instance, i2b2_concept_ref
                     # pprint.pprint(pivot.list_key_ref[link_map_data]['listPatient'][patient][instance])
                     # visit = pivot.list_key_ref[link_map_data]['listPatient'][patient][instance]['TumorPathologyEvent_Ref']
-                    dic_data_spe = obj_mapping.transfert_modifier_from_pivot(i2b2_var, patient, i2b2_modifier_ref, visit, instance, 'concept_to_define')
+                    dic_data_spe = obj_mapping.transfert_modifier_from_pivot(i2b2_var, patient, i2b2_modifier_ref, visit, instance, 'concept_to_define',mappings)
                     if dic_data_spe['tvalue'] != None or dic_data_spe['nvalue'] != None:
                         interac_i2b2.insert_data(req.write_insert_i2b2_data(dic_data_spe), obj_mapping.listvar)
         i += 1
@@ -207,7 +208,9 @@ def tranfo_data(dic_db_param, dic_pivot_files):
     # pprint.pprint(pivot.list_key_ref['TumorPathologyEvent_Ref']['listPatient'])
 
     # import i2b2 metadata file
+    #TODO @Mathias: changer la  méthode lecture du fichier( produire ) dic_pivot_files['mappings_file'] = chemin du fichier
     mappings_file = lecture_csv_file(dic_pivot_files['mappings_file'] ,',')
+    #à produire mappings ++++
     mappings = mappings_file.copy_csv_file()
 
     concept_to_transfert = load_i2b2_metadata(dic_db_param, dic_db_param['concept_sql'])

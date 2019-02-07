@@ -122,6 +122,7 @@ class PivotData:
             self.list_key_ref[var_ref]['listPatient'][patient] = {}
             self.add_key_ref(var_ref, patient, idp, ref)
         if not idp in self.list_key_ref[var_ref]['listPatient'][patient]:
+            # !!!! ajouter la liste des instances parents
             self.add_key_ref(var_ref, patient, idp, ref)
         #print (self.list_key_ref[var_ref]['listPatient'][patient][idp])
         return self.list_key_ref[var_ref]['listPatient'][patient][idp]
@@ -146,8 +147,11 @@ class PivotData:
             key_dic_file[key_var_file] = {}
             key_dic_file[key_var_file][idp] ={}
             self.list_key_ref[key_var_file]['listPatient'][patient][idp] = key_dic_file[key_var_file][idp]
+        # TODO ajout des instances @David
+        #for instance_ref in tab_pere_instance :
+            #self.list_key_ref[key_var_file]['listPatient'][patient][idp][instance_ref] = key_dic_file[key_var_file][idp][instance_ref]
 
-    def read_auto_val_patient(self) :
+    def read_auto_val_patient(self):
         f_read = open(self.file_PI, 'r')
         value = int(f_read.read())
         f_read.close()

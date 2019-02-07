@@ -98,7 +98,8 @@ class mapping_osiris:
 
         return dic_info
 
-
+    #TODO trouver la bonne ligne de mappings @Mathias
+    #TODO match_modifier @Mathias @Vianney
     def match_date(self,mappings,var_ref,patient,visit,i2b2_concept,i2b2_var,i2b2_column):
         date = self.default_date
         i = 0
@@ -276,9 +277,11 @@ class mapping_osiris:
                         dic_info['instance_num'], dic_info['sourcesystem_cd'], dic_info['provider_id']]
         return dic_info
 
-    def transfert_modifier_from_pivot(self, i2b2_var, patient, i2b2_modifier, visit, instance, i2b2_concept_ref):
+    #TODO : Générer le modifier @vianney
+    def transfert_modifier_from_pivot(self, i2b2_var, patient, i2b2_modifier, visit, instance, i2b2_concept_ref,mappings):
         dic_info = {}
         var_ref = self.find_refvar_in_pivot(i2b2_var)
+        #TODO : Fonction de récupération de la date du concept_modified (UTILISER MAPPINGS)
         dic_info['date'] = self.default_date
         dic_info['table'] = 'modifier_dimension'
         dic_info['visit_num'] = int(visit)
@@ -286,6 +289,7 @@ class mapping_osiris:
         dic_info['patient_num'] = self.obj_pivot.dic_patient[patient]
         dic_info['modifier_cd'] = i2b2_modifier
         dic_info['var'] = self.find_matchvar_in_pivot(i2b2_var)
+        #TODO : Fonction de récupération de l'instance_id du concept_modified (UTILISER MAPPINGS)
         dic_info['instance_num'] = instance
         dic_info['nvalue'] = None
         # print(i2b2_var[len(re.match('[a-zA-Z0-9]*\|', i2b2_var).group(0)):len(re.match('.*\|', i2b2_var).group(0))-1])
